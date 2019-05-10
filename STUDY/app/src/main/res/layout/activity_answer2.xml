@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:background="@mipmap/img3"
+    tools:context=".answer2">
+        <TextView
+            android:id="@+id/questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/displayquestion"
+            android:maxHeight="200dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:background="#E2DFDF"
+            android:hint="这里应当显示的是问题
+            我已经设置为包裹文件内容"/>
+        <TextView
+            android:id="@+id/myanswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我的回答"
+            android:layout_below="@id/questions"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+    <!--回答的编辑框-->
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/myanswer"
+            android:id="@+id/answers"
+            android:background="#E2DFDF"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+    <!--插入图片按钮-->
+        <ImageButton
+            android:id="@+id/photo_button"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/answers"
+            android:layout_width="wrap_content"
+            android:background="#0000"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/photo"/>
+        <TextView
+            android:id="@+id/text"
+            android:paddingTop="40dp"
+            android:textSize="18sp"
+            android:paddingLeft="10dp"
+            android:layout_below="@id/answers"
+            android:layout_toRightOf="@id/photo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击加入图片"/>
+    <!--提交按钮-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:background="#2196F3"
+            android:textSize="26sp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/answers"
+            android:layout_marginTop="25dp"
+            />
+    <!--底部导航栏-->
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/first_layout"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/first"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/first"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="家" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/second_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/second"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/three"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="消息" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/three_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/three"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/seven"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/message_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="选课" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/four_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/four"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/five"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/star"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="排行榜" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/five_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/five"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/seven"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="课程" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/img3"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".myhome">
+    <!--页面简介
+    点击我的课程应当进入myclass,点击修改资料应当进入changeinformation
+    点击关于我们应当进入about_us,点击我的收藏夹应当进入mysave
+    点击退出回到登陆界面-->
+   <!--按理说头像应当是一个用户自己自定义的但是我不知道src如何操作-->
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_gravity="center"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/three"
+        android:layout_marginBottom="5dp"
+        />
+    <!--显示用户名-->
+    <TextView
+        android:text="@string/name"
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+    <Button
+        android:id="@+id/myclass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:text="我的课程"
+        android:textColor="#277E2F"
+        android:background="#8FDAE4"/>
+    <ImageView
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:src="@mipmap/line"/>
+    <Button
+        android:id="@+id/information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:text="修改/完善资料"
+        android:background="#8FDAE4"
+        android:textColor="#277E2F"
+        />
+    <ImageView
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:src="@mipmap/line"/>
+    <Button
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:text="关于我们"
+        android:background="#8FDAE4"
+        android:textColor="#277E2F"/>
+    <ImageView
+        android:id="@+id/line3"
+        android:layout_below="@id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:src="@mipmap/line"/>
+    <Button
+        android:id="@+id/mysave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="#277E2F"
+        android:text="我的收藏夹"
+        android:background="#8FDAE4"
+        />
+    <ImageView
+        android:id="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:src="@mipmap/line"/>
+    <Button
+        android:id="@+id/logout"
+        android:layout_below="@id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="#277E2F"
+        android:text="退出"
+        android:background="#8FDAE4"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:src="@mipmap/line"/>
+
+    <!--底部导航栏-->
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/first_layout"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/first"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/first"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="家" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/second_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/second"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/three"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="消息" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/three_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/three"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/seven"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/message_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="选课" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/four_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/four"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/five"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/star"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="排行榜" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/five_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/five"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/seven"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="课程" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

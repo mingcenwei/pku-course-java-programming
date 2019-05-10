@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:background="@mipmap/img3"
+    tools:context=".MainActivity">
+    <!--总的按钮介绍-->
+    <!--此界面即为底部导航栏家的界面，点击底部导航的消息进入message，点击
+    选课进入elective，点击排行榜进入rank，点击课程进入classes,点击头像进入myhome。-->
+    <!--界面所有的需要设置的string都在strings.xml里面有放置-->
+
+
+
+    <!--头像，点击头像会出现个人中心，包含我的课程，我的信息。。-->
+    <ImageButton
+        android:id="@+id/head"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/image14"
+        />
+    <TextView
+        android:id="@+id/search"
+        android:text="@string/search"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:textSize="18sp"
+        android:background="#C5C3C3"
+        android:gravity="center"
+        android:layout_toLeftOf="@id/search_button"
+        android:hint="课程的名称/id"/>
+    <ImageButton
+        android:id="@+id/search_button"
+        android:layout_width="30dp"
+        android:textSize="18sp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:background="@mipmap/search"
+        />
+    <!--我的贡献值-->
+    <TextView
+        android:id="@+id/contrudition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="贡献值:  "
+        android:layout_above="@id/scrollview_"
+        android:textColor="#3F5CB5"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="3dp"
+        android:paddingLeft="15dp"
+        android:layout_toRightOf="@id/head"/>
+    <!--待输入，贡献值的输入-->
+    <TextView
+        android:id="@+id/mystar"
+        android:text="@string/begin_stars"
+        android:layout_above="@id/scrollview_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4CAF50"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:paddingLeft="5dp"
+        android:layout_toRightOf="@id/contrudition"/>
+    <!--body，主要是我加入的一些课程的信息-->
+    <!--点击深蓝色的框就进入classinformation-->
+    <ScrollView
+        android:id="@+id/scrollview_"
+        android:layout_below="@id/head"
+        android:layout_above="@id/menu"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@mipmap/bg"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:orientation="vertical">
+            <!--点击button应该进入class_information.xml-->
+        <!--第一条内容-->
+         <!--课程名字,已设置居中显示的-->
+        <TextView
+            android:text="@string/class1"
+            android:gravity="center"
+            android:id="@+id/class_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:hint="应当填入课程的名字"
+            android:background="#009688"
+            android:textSize="18sp"
+            />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="1"
+                    android:layout_marginTop="3dp"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:background="#FF5722"/>
+        <Button
+            android:id="@+id/content1"
+            android:background="#D85E92F1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textStyle="bold"
+            android:hint="应当显示课程的关注数，待解答的问题数目，课程的开设时间范围"
+            android:textColor="#FFFFFF"
+            android:gravity="top" />
+            </LinearLayout>
+
+        <!--第二条内容-->
+            <TextView
+                android:text="@string/class2"
+                android:gravity="center"
+                android:id="@+id/class_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:hint="应当填入课程的名字"
+                android:background="#009688"
+                android:textSize="18sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="2"
+                    android:layout_marginTop="3dp"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:background="#FF5722"/>
+                <Button
+                    android:id="@+id/content2"
+                    android:background="#D85E92F1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:textStyle="bold"
+
+                    android:hint="应当显示课程的关注数，待解答的问题数目，课程的开设时间范围"
+                    android:textColor="#FFFFFF"
+                    android:gravity="top" />
+            </LinearLayout>
+        <!--第三条内容-->
+            <TextView
+                android:text="@string/class3"
+                android:gravity="center"
+                android:id="@+id/class_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:hint="应当填入课程的名字"
+                android:background="#009688"
+                android:textSize="18sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="3"
+                    android:layout_marginTop="3dp"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:background="#FF5722"/>
+                <Button
+                    android:id="@+id/content3"
+                    android:background="#D85E92F1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:textStyle="bold"
+
+                    android:hint="应当显示课程的关注数，待解答的问题数目，课程的开设时间范围"
+                    android:textColor="#FFFFFF"
+                    android:gravity="top" />
+            </LinearLayout>
+        <!--第四条内容-->
+            <TextView
+                android:text="@string/class4"
+                android:gravity="center"
+                android:id="@+id/class_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:hint="应当填入课程的名字"
+                android:background="#009688"
+                android:textSize="18sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="4"
+                    android:layout_marginTop="3dp"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:background="#FF5722"/>
+                <Button
+                    android:id="@+id/content4"
+                    android:background="#D85E92F1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:textStyle="bold"
+
+                    android:hint="应当显示课程的关注数，待解答的问题数目，课程的开设时间范围"
+                    android:textColor="#FFFFFF"
+                    android:gravity="top" />
+            </LinearLayout>
+        <!--第五条内容-->
+            <TextView
+                android:text="@string/class5"
+                android:gravity="center"
+                android:id="@+id/class_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:hint="应当填入课程的名字"
+                android:background="#009688"
+                android:textSize="18sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="2"
+                    android:layout_marginTop="3dp"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:background="#FF5722"/>
+                <Button
+                    android:id="@+id/content5"
+                    android:background="#D85E92F1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:textStyle="bold"
+
+                    android:hint="应当显示课程的关注数，待解答的问题数目，课程的开设时间范围"
+                    android:textColor="#FFFFFF"
+                    android:gravity="top" />
+            </LinearLayout>
+        <!--科技-->
+        </LinearLayout>
+        </ScrollView>
+
+
+    <!--底部导航栏-->
+    <!--此界面即为家-->
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/first_layout"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/first"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/first"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="家" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/second_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/second"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/three"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="消息" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/three_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/three"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/seven"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/message_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="选课" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/four_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/four"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/five"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/star"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="排行榜" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/five_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/five"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/seven"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="课程" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

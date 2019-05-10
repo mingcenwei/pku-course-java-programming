@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/img3"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".question">
+    <!--点击查看所有回答进入classanswer,点击提出问题进入question2-->
+    <LinearLayout
+        android:id="@+id/begin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:background="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:hint="应当显示课程名称"
+            android:text="@string/CLASSNAME"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/publicmessage"
+        android:layout_below="@id/begin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="点击绿色框即显示问题及其回答"/>
+    <ScrollView
+        android:layout_below="@id/publicmessage"
+        android:layout_marginBottom="20dp"
+        android:background="@mipmap/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/answer_question"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--第一个问题-->
+            <LinearLayout
+                android:layout_marginBottom="2dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/number2"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="2"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#009688"
+                    android:gravity="center"
+                    android:background="#ffff"/>
+               <TextView
+
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/haveanswer2"
+                   android:background="#009688"
+                   android:textSize="18sp"
+                   android:textColor="#ffff"
+                   android:textStyle="bold"
+                   android:hint="显示问题内容
+-----------------------
+-------
+-------
+"/>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/see2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FF9800"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#673AB7"
+                android:text="查看所有回答"
+                android:layout_marginBottom="20dp"/>
+            <!--第2个问题-->
+            <LinearLayout
+                android:layout_marginBottom="2dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/number3"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="3"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#009688"
+                    android:gravity="center"
+                    android:background="#ffff"/>
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/haveanswer1"
+                    android:background="#009688"
+                    android:textSize="18sp"
+                    android:textColor="#ffff"
+                    android:textStyle="bold"
+                    android:hint="显示问题内容
+-----------------------
+-------
+-------
+"/>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/see3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FF9800"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#673AB7"
+                android:text="查看所有回答"
+                android:layout_marginBottom="20dp"/>
+            <!--第3个问题-->
+            <LinearLayout
+                android:layout_marginBottom="2dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/number1"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#009688"
+                    android:gravity="center"
+                    android:background="#ffff"/>
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/haveanswer1"
+                    android:background="#009688"
+                    android:textSize="18sp"
+                    android:textColor="#ffff"
+                    android:textStyle="bold"
+                    android:hint="显示问题内容
+-----------------------
+-------
+-------
+"/>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/see1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FF9800"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#673AB7"
+                android:text="查看所有回答"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+    <!--回答和提问-->
+    <LinearLayout
+        android:layout_above="@id/menu"
+        android:id="@+id/answer_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:textColor="#ffff"
+            android:background="#673AB7"
+            android:text="提出问题"/>
+
+    </LinearLayout>
+    <!--底部导航栏-->
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/first_layout"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/first"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/first"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="家" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/second_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/second"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/three"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="消息" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/three_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/three"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/seven"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/message_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="选课" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/four_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/four"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/five"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/star"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="排行榜" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/five_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/five"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/seven"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="课程" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
