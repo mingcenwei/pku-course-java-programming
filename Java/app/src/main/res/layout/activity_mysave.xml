@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="@mipmap/Globalbackground"
+    tools:context=".Mysave">
+
+    <!--这是每一个我关注问题的回答，点击进入该课程即为进入classinfo，
+    点击删除应当删除这个所有内容，并且,点击绿色问题显示部分进入full_a_answer
+    剩下的内容上移动-->
+    <ScrollView
+        android:layout_above="@id/menu"
+        android:id="@+id/scrollview"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:background="@mipmap/scrollbacground"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                >
+                <!--第一个收藏-->
+                <TextView
+                    android:id="@+id/number1"
+                    android:text="1"
+                    android:paddingTop="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingBottom="3dp"
+                    android:paddingRight="3dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:background="#FF5722"
+                    android:gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    />
+                <Button
+                    android:text="@string/mysave1"
+
+                    android:textSize="18sp"
+                    android:textColor="#ffffff"
+                    android:background="#009688"
+                    android:textColorHint="#ffff"
+                    android:hint="示例：
+我的问题：——————————————————
+————————————————---------
+解答：------------------------------------------------------------------------
+我的回应：======================================================"
+                    android:layout_gravity="right"
+                    android:gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/gotoclass1"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ffff"
+                    android:layout_marginBottom="10dp"
+                    android:text="进入该课程"/>
+                <Button
+                    android:id="@+id/earse1"
+                    android:background="#ffff"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="删除"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    >
+                    <!--第2个收藏-->
+                    <TextView
+                        android:id="@+id/number2"
+                        android:text="2"
+                        android:paddingTop="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingBottom="3dp"
+                        android:paddingRight="3dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:background="#FF5722"
+                        android:gravity="center"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        />
+                    <Button
+                        android:text="@string/mysave2"
+
+                        android:textSize="18sp"
+                        android:textColor="#ffffff"
+                        android:background="#009688"
+                        android:textColorHint="#ffff"
+                        android:hint="示例：
+我的问题：——————————————————
+————————————————---------
+解答：------------------------------------------------------------------------
+我的回应：======================================================"
+                        android:layout_gravity="right"
+                        android:gravity="top"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/gotoclass2"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ffff"
+                    android:layout_marginBottom="10dp"
+                    android:text="进入该课程"/>
+                <Button
+                    android:id="@+id/earse2"
+                    android:background="#ffff"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="删除"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                >
+                <!--第一个收藏-->
+                <TextView
+                    android:id="@+id/number3"
+                    android:text="3"
+                    android:paddingTop="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingBottom="3dp"
+                    android:paddingRight="3dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:background="#FF5722"
+                    android:gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    />
+                <Button
+                    android:text="@string/mysave1"
+
+                    android:textSize="18sp"
+                    android:textColor="#ffffff"
+                    android:background="#009688"
+                    android:textColorHint="#ffff"
+                    android:hint="示例：
+我的问题：——————————————————
+————————————————---------
+解答：------------------------------------------------------------------------
+我的回应：======================================================"
+                    android:layout_gravity="right"
+                    android:gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/gotoclass3"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ffff"
+                    android:layout_marginBottom="10dp"
+                    android:text="进入该课程"/>
+                <Button
+                    android:id="@+id/earse3"
+                    android:background="#ffff"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="删除"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!--底部导航栏-->
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/first_layout"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/first"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/first"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Home" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/second_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/second"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/three"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Index" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/three_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/three"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/three"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/message_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Mytopic" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/four_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/four"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/four"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/star"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Question" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/five_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/five"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/five"
+                    />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="MySave" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
