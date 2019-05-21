@@ -1,0 +1,230 @@
+BEGIN
+  
+INSERT INTO dbo.[TOPICS] (
+  [TOPIC_ID]
+, [TOPIC_TITLE]
+, [TOPIC_DESCRIPTION])
+  
+    SELECT
+        RecordedDateTime
+       ,RecordedDateTimeLocal
+       ,CpuPctProcessorTime
+    FROM OPENJSON(N'[
+  {
+    "TOPIC_ID": 1000001.0,
+    "TOPIC_TITLE": "数学分析I",
+    "TOPIC_DESCRIPTION": "1"
+  },
+  {
+    "TOPIC_ID": 1000002.0,
+    "TOPIC_TITLE": "数学分析II",
+    "TOPIC_DESCRIPTION": "1"
+  },
+  {
+    "TOPIC_ID": 1000003.0,
+    "TOPIC_TITLE": "数学分析III",
+    "TOPIC_DESCRIPTION": "1"
+  },
+  {
+    "TOPIC_ID": 1000004.0,
+    "TOPIC_TITLE": "高等数学（上）",
+    "TOPIC_DESCRIPTION": "1"
+  },
+  {
+    "TOPIC_ID": 1000005.0,
+    "TOPIC_TITLE": "高等数学（下）",
+    "TOPIC_DESCRIPTION": "1"
+  },
+  {
+    "TOPIC_ID": 1000006.0,
+    "TOPIC_TITLE": "高等代数（上）",
+    "TOPIC_DESCRIPTION": "1"
+  },
+  {
+    "TOPIC_ID": 1000007.0,
+    "TOPIC_TITLE": "高等代数（下）",
+    "TOPIC_DESCRIPTION": "1"
+  },
+  {
+    "TOPIC_ID": 1000008.0,
+    "TOPIC_TITLE": "线性代数",
+    "TOPIC_DESCRIPTION": "1"
+  },
+  {
+    "TOPIC_ID": 1000009.0,
+    "TOPIC_TITLE": "计算概论",
+    "TOPIC_DESCRIPTION": "1"
+  },
+  {
+    "TOPIC_ID": 1000010.0,
+    "TOPIC_TITLE": "程序设计",
+    "TOPIC_DESCRIPTION": "1"
+  },
+  {
+    "TOPIC_ID": 1000011.0,
+    "TOPIC_TITLE": "Java程序设计",
+    "TOPIC_DESCRIPTION": "1"
+  },
+  {
+    "TOPIC_ID": 2000001.0,
+    "TOPIC_TITLE": "英语阅读",
+    "TOPIC_DESCRIPTION": "2"
+  },
+  {
+    "TOPIC_ID": 2000002.0,
+    "TOPIC_TITLE": "英语听说",
+    "TOPIC_DESCRIPTION": "2"
+  },
+  {
+    "TOPIC_ID": 2000003.0,
+    "TOPIC_TITLE": "英语写作",
+    "TOPIC_DESCRIPTION": "2"
+  },
+  {
+    "TOPIC_ID": 2000004.0,
+    "TOPIC_TITLE": "美国文化概览",
+    "TOPIC_DESCRIPTION": "2"
+  },
+  {
+    "TOPIC_ID": 2000005.0,
+    "TOPIC_TITLE": "高级英语",
+    "TOPIC_DESCRIPTION": "2"
+  },
+  {
+    "TOPIC_ID": 2000006.0,
+    "TOPIC_TITLE": "英语批判性阅读与写作",
+    "TOPIC_DESCRIPTION": "2"
+  },
+  {
+    "TOPIC_ID": 3000001.0,
+    "TOPIC_TITLE": "太极拳",
+    "TOPIC_DESCRIPTION": "3"
+  },
+  {
+    "TOPIC_ID": 3000002.0,
+    "TOPIC_TITLE": "健美操",
+    "TOPIC_DESCRIPTION": "3"
+  },
+  {
+    "TOPIC_ID": 3000003.0,
+    "TOPIC_TITLE": "排球",
+    "TOPIC_DESCRIPTION": "3"
+  },
+  {
+    "TOPIC_ID": 3000004.0,
+    "TOPIC_TITLE": "篮球",
+    "TOPIC_DESCRIPTION": "3"
+  },
+  {
+    "TOPIC_ID": 3000005.0,
+    "TOPIC_TITLE": "游泳",
+    "TOPIC_DESCRIPTION": "3"
+  },
+  {
+    "TOPIC_ID": 3000006.0,
+    "TOPIC_TITLE": "网球",
+    "TOPIC_DESCRIPTION": "3"
+  },
+  {
+    "TOPIC_ID": 3000007.0,
+    "TOPIC_TITLE": "足球",
+    "TOPIC_DESCRIPTION": "3"
+  },
+  {
+    "TOPIC_ID": 3000008.0,
+    "TOPIC_TITLE": "汉字太极",
+    "TOPIC_DESCRIPTION": "3"
+  },
+  {
+    "TOPIC_ID": 4000001.0,
+    "TOPIC_TITLE": "思想品德修养与法律基础",
+    "TOPIC_DESCRIPTION": "4"
+  },
+  {
+    "TOPIC_ID": 4000002.0,
+    "TOPIC_TITLE": "中国近现代史纲要",
+    "TOPIC_DESCRIPTION": "4"
+  },
+  {
+    "TOPIC_ID": 4000003.0,
+    "TOPIC_TITLE": "马克思主义基本原理概论",
+    "TOPIC_DESCRIPTION": "4"
+  },
+  {
+    "TOPIC_ID": 4000004.0,
+    "TOPIC_TITLE": "毛泽东思想和中国特色社会主义理论体系概论",
+    "TOPIC_DESCRIPTION": "4"
+  },
+  {
+    "TOPIC_ID": 4000005.0,
+    "TOPIC_TITLE": "形势与政策",
+    "TOPIC_DESCRIPTION": "4"
+  },
+  {
+    "TOPIC_ID": 5000001.0,
+    "TOPIC_TITLE": "VR设计",
+    "TOPIC_DESCRIPTION": "5"
+  },
+  {
+    "TOPIC_ID": 5000002.0,
+    "TOPIC_TITLE": "视频剪辑",
+    "TOPIC_DESCRIPTION": "5"
+  },
+  {
+    "TOPIC_ID": 5000003.0,
+    "TOPIC_TITLE": "动漫制作",
+    "TOPIC_DESCRIPTION": "5"
+  },
+  {
+    "TOPIC_ID": 5000004.0,
+    "TOPIC_TITLE": "程序设计思维",
+    "TOPIC_DESCRIPTION": "5"
+  },
+  {
+    "TOPIC_ID": 5000005.0,
+    "TOPIC_TITLE": "基本乐理知识",
+    "TOPIC_DESCRIPTION": "5"
+  },
+  {
+    "TOPIC_ID": 5000006.0,
+    "TOPIC_TITLE": "音乐中的数学",
+    "TOPIC_DESCRIPTION": "5"
+  },
+  {
+    "TOPIC_ID": 5000007.0,
+    "TOPIC_TITLE": "网页制作",
+    "TOPIC_DESCRIPTION": "5"
+  },
+  {
+    "TOPIC_ID": 6000001.0,
+    "TOPIC_TITLE": "公共英语（上）",
+    "TOPIC_DESCRIPTION": "6"
+  },
+  {
+    "TOPIC_ID": 6000002.0,
+    "TOPIC_TITLE": "公共英语（下）",
+    "TOPIC_DESCRIPTION": "6"
+  },
+  {
+    "TOPIC_ID": 6000003.0,
+    "TOPIC_TITLE": "公共韩语",
+    "TOPIC_DESCRIPTION": "6"
+  },
+  {
+    "TOPIC_ID": 6000004.0,
+    "TOPIC_TITLE": "公共法语",
+    "TOPIC_DESCRIPTION": "6"
+  },
+  {
+    "TOPIC_ID": 6000005.0,
+    "TOPIC_TITLE": "公共德语",
+    "TOPIC_DESCRIPTION": "6"
+  }
+]')
+    WITH (
+      RecordedDateTime      SERIAL_NUMBER '$.TOPIC_ID'
+    , RecordedDateTimeLocal nvarchar(511) '$.TOPIC_TITLE'
+    , CpuPctProcessorTime   LARGE_SIZE_TEXT     '$.TOPIC_DESCRIPTION'
+    ) AS jsonValues
+  
+END

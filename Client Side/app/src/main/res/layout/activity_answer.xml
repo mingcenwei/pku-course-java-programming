@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:background="@drawable/background"
+    tools:context=".Answer">
+<ScrollView
+    android:layout_above="@id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/questions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/displayquestion"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:background="@drawable/question_display"
+        android:hint="这里应当显示的是问题/设置包裹内容
+
+
+
+
+"/>
+
+    <TextView
+        android:id="@+id/myanswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我的回答"
+        android:textStyle="bold"
+        android:textColor="#009688"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+    <!--回答的编辑框-->
+        <EditText
+            android:id="@+id/answers"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/textviews" />
+       <!--插入图片按钮-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:onClick="button_add_picture"
+                android:id="@+id/photo_button"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:background="#0000"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/photo"/>
+            <TextView
+                android:id="@+id/text"
+                android:paddingTop="40dp"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:layout_toRightOf="@id/photo_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击加入图片"/>
+            <!--提交按钮-->
+            <Button
+                android:onClick="button_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_circle_shape"
+                android:text="确认"
+                android:textStyle="bold"
+                android:textColor="#009688"
+                android:textSize="26sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="25dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
+    <!--底部导航栏-->
+<LinearLayout
+android:id="@+id/menu"
+android:layout_width="match_parent"
+android:layout_height="50dp"
+android:layout_alignParentBottom="true">
+
+<RelativeLayout
+    android:gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/first_layout"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/button_home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/first"
+            android:onClick="button_home"
+            />
+
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="个人中心" />
+    </LinearLayout>
+
+</RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:id="@+id/second_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/button_index"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/three"
+            android:onClick="button_index"
+            />
+
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="搜索" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/three_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/button_mytopic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/three"
+            android:onClick="button_mytopic"
+            />
+
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/message_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="主页" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/four_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/button_question"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/four"
+            android:onClick="button_question"
+            />
+
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/star"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="我的问题" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/five_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/button_mysave"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/five"
+            android:onClick="button_mysave"
+            />
+
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="我的收藏" />
+    </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>
+    </RelativeLayout>

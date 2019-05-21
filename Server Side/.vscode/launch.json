@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ConnectServer",
+            "request": "launch",
+            "mainClass": "pku.course.java.ConnectServer",
+            "projectName": "server_side"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "pku.course.java.App",
+            "projectName": "server_side"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "pku.course.java.App",
+            "projectName": "university_q_and_a"
+        }
+    ]
+}
